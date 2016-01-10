@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="posts">
+  {% for post in post_list %}
+    <!-- A single blog post -->
+    <section class="post">
+        <header class="post-header">
+          {% load staticfiles%}
+          <img class="post-avatar" alt="Tilo Mitra&#x27;s avatar" height="48" width="48" src="{% static 'img/common/tilo-avatar.png' %}">
+
+          <h2 class="post-title">{{ post.title }}</h2>
+
+            <p class="post-meta">
+            Time: <a href="#" class="post-author">{{ post.date_time }}</a> under <a class="post-category post-category-design" href="#">{{ post.category }}</a>
+            </p>
+        </header>
+
+        <div class="post-description">
+            <p>
+              {{ post.content }}
+            </p>
+        </div>
+    </section>
+  {% endfor %}
+</div>
+{% endblock %}

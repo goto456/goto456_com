@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+#########################################################################
+# File Name: urls.py
+# Author: Wang Biwen
+# mail: wangbiwen88@126.com
+# Created Time: 2016.01.08
+#########################################################################
+
 """goto456_com URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -19,4 +28,7 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    # 主页
+    url(r'^$', 'blog.views.home'),
 ]
