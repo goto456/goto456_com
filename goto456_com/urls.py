@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
     # 主页
-    url(r'^$', 'blog.views.home'),
+    url(r'^$', 'blog.views.home', name='home'),
+    url(r'^(?P<id>\d+)/$', 'blog.views.detail', name='detail')
 ]
