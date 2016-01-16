@@ -24,3 +24,19 @@ def detail(request, id):
         raise Http404
     return render_to_response('post.html', {'post': post})
 
+def archives(request):
+    try:
+        post_list = Article.objects.all()
+    except Article.DoesNotExit:
+        raise Http404
+    return render_to_response('archives.html', {'post_list': post_list})
+
+def aboutme(request):
+    return render(request, 'aboutme.html')
+
+def search_tag(request, tag):
+    try:
+        post_list = Article.objects.filter(category__iexact=tag) #contains
+    except Article.DoesNotExist:
+        raise Http404
+    return render_to_response('tag.html', {'post_list': post_list})

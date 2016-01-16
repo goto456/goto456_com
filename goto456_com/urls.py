@@ -31,5 +31,8 @@ urlpatterns = [
 
     # 主页
     url(r'^$', 'blog.views.home', name='home'),
-    url(r'^(?P<id>\d+)/$', 'blog.views.detail', name='detail')
+    url(r'^(?P<id>\d+)/$', 'blog.views.detail', name='detail'),
+    url(r'^archives/$', 'blog.views.archives', name='archives'),
+    url(r'^aboutme/$', 'blog.views.aboutme', name='aboutme'),
+    url(r'^tag(?P<tag>\w+)', 'blog.views.search_tag', name='search_tag'),
 ]

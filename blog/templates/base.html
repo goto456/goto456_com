@@ -19,7 +19,7 @@
     <div class="sidebar pure-u-1 pure-u-md-1-4">
         <div class="header">
             <h1 class="brand-title">文哥的专栏</h1>
-            <h2 class="brand-tagline">既然选择了远方，便只顾风雨兼程！</h2>
+            <h2 class="brand-tagline">生活不是苟且，还有诗和远方。</h2>
 
             <nav class="nav">
                 <ul class="nav-list">
@@ -27,7 +27,7 @@
                         <a class="pure-button" href="/">主页</a>
                     </li>
                     <li class="nav-item">
-                        <a class="pure-button" href="/">归档</a>
+                    <a class="pure-button" href="{% url "archives" %}">归档</a>
                     </li>
                     <li class="nav-item">
                         <a class="pure-button" href="http://github.com/goto456" target="_blank">GitHub</a>
@@ -39,7 +39,7 @@
                         <a class="pure-button" href="/">专题</a>
                     </li>
                     <li class="nav-item">
-                        <a class="pure-button" href="/">About me</a>
+                    <a class="pure-button" href="{% url "aboutme"%}">About me</a>
                     </li>
                 </ul>
             </nav>

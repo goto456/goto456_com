@@ -12,13 +12,13 @@
           <h2 class="post-title">{{ post.title }}</h2>
 
             <p class="post-meta">
-            Time: <a href="#" class="post-author">{{ post.date_time }}</a> under <a class="post-category post-category-design" href="#">{{ post.category }}</a>
+            Time: <a href="#" class="post-author">{{ post.date_time }}</a> under <a class="post-category post-category-design" href="{% url "search_tag" tag=post.category %}">{{ post.category }}</a>
             </p>
         </header>
 
         <div class="post-description">
             <p>
-              {{ post.content | custom_markdown}}
+              {{ post.content|custom_markdown}}
             </p>
         </div>
     </section>
