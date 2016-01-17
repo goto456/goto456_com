@@ -1,4 +1,2 @@
-templates.github/
-templates.others/
-static.others/
 *.pyc
+venv/
